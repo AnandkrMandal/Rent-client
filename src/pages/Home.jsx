@@ -58,14 +58,21 @@ const Home = () => {
               key={property._id}
               className="bg-gray-200 border p-4 rounded-lg shadow-lg"
             >
-              <strong className="text-red-600">
-                <i className="fa-solid fa-heart"></i> {property.likeCount}
-              </strong>
+              <div className="flex flex-row justify-between">
+                <strong className="text-red-600">
+                  <i className="fa-solid fa-heart"></i> {property.likeCount}
+                </strong>
+                <p className="text-blue-600 font-bold text-2xl">
+                  ₹{property.price}
+                </p>
+              </div>
+
               <img
                 src={property.image[0]}
                 alt={property.title}
                 className="w-full h-48 object-cover mb-4 rounded"
               />
+              
               <h2 className="text-xl  text-blue-800 font-semibold mb-2">
                 {property.title.trim()}
               </h2>
