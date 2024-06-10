@@ -32,7 +32,7 @@ const PropertyDetails = () => {
   }, [id]);
 
   if (loading) {
-    return <div className="text-center py-10">Loading...</div>;
+    return <div className="text-center py-20">Loading...</div>;
   }
 
   if (!property) {
@@ -48,7 +48,7 @@ const PropertyDetails = () => {
               <img
                 src={property.image[0]}
                 alt={property.title}
-                className="w-full mx-auto rounded "
+                className="w-full h-[390px] mx-auto rounded object-cover "
               />
             </div>
             <div className="sm:pl-0 sm:pt-0 lg:pl-10 lg:pt-6 my-auto justify-center items-center">
